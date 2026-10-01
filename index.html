@@ -14,7 +14,10 @@
     .section-title { color: #38bdf8; margin-top: 32px; font-size: 20px; border-bottom: 1px solid #334155; padding-bottom: 8px; }
     .card { background: #1e293b; border: 1px solid #334155; padding: 18px; border-radius: 10px; margin-bottom: 14px; border-left: 4px solid #38bdf8; position: relative; }
     .card.appt-card { border-left-color: #4ade80; }
-    .card-header { display: flex; justify-content: space-between; align-items: center; font-size: 14px; color: #94a3b8; margin-bottom: 8px; padding-right: 80px; }
+    
+    /* Increased right padding to prevent button overlap */
+    .card-header { display: flex; justify-content: space-between; align-items: center; font-size: 14px; color: #94a3b8; margin-bottom: 8px; padding-right: 140px; }
+    
     .sender { font-weight: 600; color: #f3f4f6; }
     .message { font-size: 15px; line-height: 1.5; color: #e2e8f0; white-space: pre-wrap; }
     .time { font-size: 12px; color: #64748b; }
@@ -46,7 +49,7 @@
   import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
   import { getFirestore, collection, query, orderBy, onSnapshot, doc, deleteDoc } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js";
 
-  const ADMIN_PASSWORD = "ram";
+  const ADMIN_PASSWORD = "admin";
 
   const firebaseConfig = {
     apiKey: "AIzaSyA9Wd5qG4WoqeTddqcEtUhNmozNVey-QAQ",
