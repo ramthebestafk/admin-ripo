@@ -7,23 +7,46 @@
   <style>
     * { box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
     body { background-color: #0f172a; color: #f8fafc; padding: 40px 20px; max-width: 850px; margin: 0 auto; }
-    h1 { color: #38bdf8; border-bottom: 2px solid #334155; padding-bottom: 12px; margin-bottom: 24px; }
+    h1 { color: #38bdf8; border-bottom: 2px solid #334155; padding-bottom: 12px; margin-bottom: 24px; overflow-wrap: break-word; }
     .login-box { background: #1e293b; padding: 24px; border-radius: 12px; border: 1px solid #334155; max-width: 400px; margin: 60px auto; text-align: center; }
     input[type="password"] { width: 100%; padding: 12px; margin: 16px 0; border-radius: 6px; border: 1px solid #475569; background: #0f172a; color: #fff; text-align: center; font-size: 16px; }
     button { padding: 12px 24px; background: #0284c7; color: white; border: none; border-radius: 6px; font-weight: 600; cursor: pointer; width: 100%; }
     .section-title { color: #38bdf8; margin-top: 32px; font-size: 20px; border-bottom: 1px solid #334155; padding-bottom: 8px; }
-    .card { background: #1e293b; border: 1px solid #334155; padding: 18px; border-radius: 10px; margin-bottom: 14px; border-left: 4px solid #38bdf8; position: relative; }
+    
+    .card { 
+      background: #1e293b; 
+      border: 1px solid #334155; 
+      padding: 18px; 
+      border-radius: 10px; 
+      margin-bottom: 14px; 
+      border-left: 4px solid #38bdf8; 
+      position: relative;
+      overflow-wrap: break-word;
+      word-break: break-word;
+      overflow: hidden;
+    }
     .card.appt-card { border-left-color: #4ade80; }
     
-    /* Increased right padding to prevent button overlap */
-    .card-header { display: flex; justify-content: space-between; align-items: center; font-size: 14px; color: #94a3b8; margin-bottom: 8px; padding-right: 140px; }
+    .card-header { 
+      display: flex; 
+      justify-content: space-between; 
+      align-items: center; 
+      font-size: 14px; 
+      color: #94a3b8; 
+      margin-bottom: 8px; 
+      padding-right: 140px; 
+      flex-wrap: wrap;
+      gap: 8px;
+      overflow-wrap: break-word;
+      word-break: break-word;
+    }
     
-    .sender { font-weight: 600; color: #f3f4f6; }
-    .message { font-size: 15px; line-height: 1.5; color: #e2e8f0; white-space: pre-wrap; }
-    .time { font-size: 12px; color: #64748b; }
+    .sender { font-weight: 600; color: #f3f4f6; overflow-wrap: break-word; word-break: break-word; }
+    .message { font-size: 15px; line-height: 1.5; color: #e2e8f0; white-space: pre-wrap; overflow-wrap: break-word; word-break: break-word; }
+    .time { font-size: 12px; color: #64748b; overflow-wrap: break-word; word-break: break-word; }
     .delete-btn { position: absolute; top: 16px; right: 16px; background: #ef4444; color: white; border: none; padding: 6px 12px; border-radius: 6px; font-size: 12px; font-weight: 600; cursor: pointer; width: auto; }
     .delete-btn:hover { background: #dc2626; }
-    .badge { background: #0f172a; padding: 4px 8px; border-radius: 4px; border: 1px solid #334155; color: #38bdf8; font-size: 13px; display: inline-block; margin-top: 6px; }
+    .badge { background: #0f172a; padding: 4px 8px; border-radius: 4px; border: 1px solid #334155; color: #38bdf8; font-size: 13px; display: inline-block; margin-top: 6px; overflow-wrap: break-word; word-break: break-word; }
   </style>
 </head>
 <body>
